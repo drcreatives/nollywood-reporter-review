@@ -1,0 +1,475 @@
+The review section of a site like The Nollywood Reporter needs to balance editorial flair with
+readability. Here&#39;s a sample typographic layout applying the font hierarchy and spacing
+principles we discussed—tailored specifically for a review article.
+�� Sample Typography Layout for the Review Section
+�� Font Roles &amp; Selection
+Element Font
+
+Family Weight Purpose
+
+Review Title (H1) Montserrat Bold Eye-catching, sets the tone
+Subheading (H2) Raleway Mediu
+
+m Introduces key themes or rating
+Body Text Lora Regular Main content, optimized for
+
+readability
+
+Reviewer
+Info/Date Poppins Light Secondary info, unobtrusive
+Pull Quotes Lora Italic Italic Highlights key insights
+�� Font Size Scale
+Element Font
+Size
+Line
+Height
+
+Letter
+Spacing
+Review Title (H1) 40px 48px -0.5px
+Subheading (H2) 28px 36px 0px
+Body Text 18px 30px 0.25px
+Reviewer
+Info/Date 14px 20px 0.5px
+Pull Quotes 20px 32px 0px
+✅ All sizes should be implemented using rem units for responsiveness (e.g., 2.5rem for H1).
+
+Here&#39;s a full-featured review template tailored for The Nollywood Reporter, incorporating:
+ �� A compelling title and subheading
+ ⭐ Rating stars
+ ��️ Featured image
+ �� Reviewer info
+ �� Pull quote
+ �� Body content
+ �� Call-to-action buttons
+
+�� Full Review Template (HTML + CSS)
+�� HTML Structure
+&lt;article class=&quot;review&quot;&gt;
+&lt;header class=&quot;review-header&quot;&gt;
+&lt;img src=&quot;echoes-of-lagos.jpg&quot; alt=&quot;Echoes of Lagos film still&quot; class=&quot;review-image&quot;&gt;
+&lt;h1 class=&quot;review-title&quot;&gt;A Cinematic Triumph: &lt;em&gt;Echoes of Lagos&lt;/em&gt;&lt;/h1&gt;
+&lt;h2 class=&quot;review-subheading&quot;&gt;A masterful blend of tradition and innovation&lt;/h2&gt;
+&lt;div class=&quot;review-meta&quot;&gt;
+&lt;span&gt;By Benjamin Okoro&lt;/span&gt; · &lt;span&gt;August 9, 2025&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;review-rating&quot;&gt;
+&lt;span class=&quot;star&quot;&gt;★&lt;/span&gt;
+&lt;span class=&quot;star&quot;&gt;★&lt;/span&gt;
+&lt;span class=&quot;star&quot;&gt;★&lt;/span&gt;
+&lt;span class=&quot;star&quot;&gt;★&lt;/span&gt;
+&lt;span class=&quot;star half&quot;&gt;★&lt;/span&gt;
+&lt;span class=&quot;rating-score&quot;&gt;4.5/5&lt;/span&gt;
+
+&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;blockquote class=&quot;pull-quote&quot;&gt;
+“Echoes of Lagos doesn’t just tell a story—it sings it.”
+&lt;/blockquote&gt;
+
+&lt;section class=&quot;review-body&quot;&gt;
+&lt;p&gt;
+From the opening scene, &lt;em&gt;Echoes of Lagos&lt;/em&gt; immerses viewers in a vibrant
+tapestry of sound, color, and emotion. Director Adaeze Nwosu crafts a narrative that is both
+deeply personal and universally resonant...
+&lt;/p&gt;
+&lt;p&gt;
+The cinematography captures the soul of the city, while the soundtrack—an eclectic mix of
+Afrobeat and orchestral arrangements—elevates every moment. Performances by Chinedu
+Okeke and Ifeoma Adebayo are nothing short of mesmerizing.
+&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;footer class=&quot;review-footer&quot;&gt;
+&lt;button class=&quot;cta-button&quot;&gt;Read More Reviews&lt;/button&gt;
+&lt;button class=&quot;cta-button secondary&quot;&gt;Watch Trailer&lt;/button&gt;
+&lt;/footer&gt;
+&lt;/article&gt;
+
+�� CSS Styling
+.review {
+max-width: 800px;
+margin: 0 auto;
+padding: 2rem;
+
+font-family: &#39;Lora&#39;, serif;
+color: #111;
+}
+
+.review-header {
+text-align: center;
+margin-bottom: 2rem;
+}
+
+.review-image {
+width: 100%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 1rem;
+}
+
+.review-title {
+font-family: &#39;Montserrat&#39;, sans-serif;
+font-size: 2.5rem;
+line-height: 1.2;
+letter-spacing: -0.5px;
+font-weight: bold;
+}
+
+.review-subheading {
+font-family: &#39;Raleway&#39;, sans-serif;
+font-size: 1.75rem;
+line-height: 1.3;
+font-weight: 500;
+margin-top: 0.5rem;
+
+}
+
+.review-meta {
+font-family: &#39;Poppins&#39;, sans-serif;
+font-size: 0.875rem;
+color: #666;
+margin-top: 0.5rem;
+}
+
+.review-rating {
+margin-top: 1rem;
+font-size: 1.25rem;
+color: #f5b301;
+}
+
+.star {
+margin-right: 2px;
+}
+
+.star.half::after {
+content: &#39;☆&#39;;
+color: #ccc;
+position: relative;
+left: -1em;
+}
+
+.rating-score {
+margin-left: 0.5rem;
+font-weight: bold;
+color: #333;
+
+}
+
+.pull-quote {
+font-style: italic;
+font-size: 1.25rem;
+line-height: 1.6;
+margin: 2rem 0;
+text-align: center;
+color: #444;
+}
+
+.review-body p {
+font-size: 1.125rem;
+line-height: 1.7;
+margin-bottom: 1.5rem;
+}
+
+.review-footer {
+display: flex;
+justify-content: center;
+gap: 1rem;
+margin-top: 2rem;
+}
+
+.cta-button {
+background-color: #111;
+color: #fff;
+border: none;
+padding: 0.75rem 1.5rem;
+font-size: 1rem;
+
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+background-color: #333;
+}
+
+.cta-button.secondary {
+background-color: #f5b301;
+color: #111;
+}
+
+.cta-button.secondary:hover {
+background-color: #e0a800;
+}
+
+�� Responsive Adjustments
+@media (max-width: 768px) {
+.review-title { font-size: 2rem; }
+.review-subheading { font-size: 1.5rem; }
+.review-body p { font-size: 1rem; }
+.review-footer {
+flex-direction: column;
+align-items: center;
+}
+}
+
+Enhancing the review template with three key additions:
+
+1. �� Comment Section – for reader engagement
+2. �� Social Share Buttons – to boost visibility
+3. �� Structured Data (JSON-LD) – for SEO and rich snippets
+
+�� 1. Comment Section (HTML + CSS)
+�� HTML
+&lt;section class=&quot;review-comments&quot;&gt;
+&lt;h3&gt;Leave a Comment&lt;/h3&gt;
+&lt;form class=&quot;comment-form&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Your Name&quot; required&gt;
+&lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Your Email&quot; required&gt;
+&lt;textarea name=&quot;comment&quot; rows=&quot;5&quot; placeholder=&quot;Your Comment&quot; required&gt;&lt;/textarea&gt;
+&lt;button type=&quot;submit&quot;&gt;Post Comment&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;div class=&quot;comment-list&quot;&gt;
+&lt;div class=&quot;comment&quot;&gt;
+&lt;strong&gt;Amaka O.&lt;/strong&gt;
+&lt;p&gt;This review captures the essence of the film beautifully. I felt the same way watching
+it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+�� CSS
+.review-comments {
+margin-top: 3rem;
+border-top: 1px solid #ddd;
+padding-top: 2rem;
+}
+
+.review-comments h3 {
+font-family: &#39;Montserrat&#39;, sans-serif;
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+width: 100%;
+padding: 0.75rem;
+margin-bottom: 1rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-family: &#39;Lora&#39;, serif;
+}
+
+.comment-form button {
+background-color: #111;
+color: #fff;
+border: none;
+padding: 0.75rem 1.5rem;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.comment-list {
+margin-top: 2rem;
+}
+
+.comment {
+
+margin-bottom: 1.5rem;
+padding: 1rem;
+background-color: #f9f9f9;
+border-radius: 4px;
+}
+
+�� 2. Social Share Buttons
+�� HTML
+&lt;div class=&quot;social-share&quot;&gt;
+&lt;span&gt;Share this review:&lt;/span&gt;
+&lt;a
+href=&quot;https://www.facebook.com/sharer/sharer.php?u=https://nollywoodreporter.com/review/ech
+oes-of-lagos&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;
+&lt;a href=&quot;https://twitter.com/intent/tweet?url=https://nollywoodreporter.com/review/echoes-of-
+lagos&amp;text=Check out this review of Echoes of Lagos!&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;
+&lt;a
+href=&quot;https://www.linkedin.com/shareArticle?mini=true&amp;url=https://nollywoodreporter.com/review
+/echoes-of-lagos&quot; target=&quot;_blank&quot;&gt;LinkedIn&lt;/a&gt;
+&lt;/div&gt;
+�� CSS
+.social-share {
+margin-top: 2rem;
+font-size: 0.95rem;
+}
+
+.social-share a {
+margin-right: 1rem;
+color: #0077b5;
+text-decoration: none;
+}
+
+.social-share a:hover {
+
+text-decoration: underline;
+}
+
+�� 3. Structured Data (SEO)
+Add this inside a &lt;script type=&quot;application/ld+json&quot;&gt; tag in the &lt;head&gt; or just before &lt;/body&gt;:
+{
+&quot;@context&quot;: &quot;https://schema.org&quot;,
+&quot;@type&quot;: &quot;Review&quot;,
+&quot;itemReviewed&quot;: {
+&quot;@type&quot;: &quot;Movie&quot;,
+&quot;name&quot;: &quot;Echoes of Lagos&quot;,
+&quot;director&quot;: {
+&quot;@type&quot;: &quot;Person&quot;,
+&quot;name&quot;: &quot;Adaeze Nwosu&quot;
+}
+},
+&quot;author&quot;: {
+&quot;@type&quot;: &quot;Person&quot;,
+&quot;name&quot;: &quot;Benjamin Okoro&quot;
+},
+&quot;reviewRating&quot;: {
+&quot;@type&quot;: &quot;Rating&quot;,
+&quot;ratingValue&quot;: &quot;4.5&quot;,
+&quot;bestRating&quot;: &quot;5&quot;
+},
+&quot;reviewBody&quot;: &quot;Echoes of Lagos immerses viewers in a vibrant tapestry of sound, color, and
+emotion...&quot;
+}
+✅ This helps Google display rich snippets like star ratings and reviewer info in search results.
+
+Integrate this with a CMS like WordPress or add moderation features for comments next?
+
+Integrating this review template into WordPress allows you to manage content dynamically,
+leverage plugins, and maintain SEO best practices. Here&#39;s how to do it step by step:
+
+��️ Step-by-Step Integration into WordPress
+�� 1. Create a Custom Post Type for Reviews
+Use a plugin like Custom Post Type UI or add this to your theme’s functions.php:
+function create_review_post_type() {
+register_post_type(&#39;review&#39;,
+array(
+&#39;labels&#39; =&gt; array(
+&#39;name&#39; =&gt; __(&#39;Reviews&#39;),
+&#39;singular_name&#39; =&gt; __(&#39;Review&#39;)
+),
+&#39;public&#39; =&gt; true,
+&#39;has_archive&#39; =&gt; true,
+&#39;supports&#39; =&gt; array(&#39;title&#39;, &#39;editor&#39;, &#39;thumbnail&#39;, &#39;custom-fields&#39;),
+&#39;rewrite&#39; =&gt; array(&#39;slug&#39; =&gt; &#39;reviews&#39;),
+&#39;show_in_rest&#39; =&gt; true
+)
+);
+}
+add_action(&#39;init&#39;, &#39;create_review_post_type&#39;);
+✅ This creates a new section in your dashboard for managing reviews.
+
+��️ 2. Add Custom Fields (ACF Plugin Recommended)
+Install Advanced Custom Fields (ACF) and create fields like:
+Field Name Type Purpose
+movie_title Text Title of the film
+
+director_name Text Director&#39;s name
+rating Number Review score (e.g.,
+
+4.5)
+
+pull_quote Text Area Highlighted quote
+reviewer_nam
+e Text Author of the review
+review_date Date
+
+Picker Date of publication
+trailer_url URL Link to trailer
+
+�� 3. Create a Custom Template (single-review.php)
+Place this file in your theme folder. Here&#39;s a simplified version using WordPress functions:
+&lt;?php get_header(); ?&gt;
+
+&lt;article class=&quot;review&quot;&gt;
+&lt;header class=&quot;review-header&quot;&gt;
+&lt;?php the_post_thumbnail(&#39;large&#39;, [&#39;class&#39; =&gt; &#39;review-image&#39;]); ?&gt;
+&lt;h1 class=&quot;review-title&quot;&gt;&lt;?php the_field(&#39;movie_title&#39;); ?&gt;&lt;/h1&gt;
+&lt;h2 class=&quot;review-subheading&quot;&gt;&lt;?php the_title(); ?&gt;&lt;/h2&gt;
+&lt;div class=&quot;review-meta&quot;&gt;
+&lt;span&gt;&lt;?php the_field(&#39;reviewer_name&#39;); ?&gt;&lt;/span&gt; ·
+&lt;span&gt;&lt;?php the_field(&#39;review_date&#39;); ?&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;review-rating&quot;&gt;
+&lt;?php
+$rating = get_field(&#39;rating&#39;);
+for ($i = 1; $i &lt;= 5; $i++) {
+echo ($i &lt;= floor($rating)) ? &#39;&lt;span class=&quot;star&quot;&gt;★&lt;/span&gt;&#39; : &#39;&lt;span
+class=&quot;star&quot;&gt;☆&lt;/span&gt;&#39;;
+}
+
+?&gt;
+&lt;span class=&quot;rating-score&quot;&gt;&lt;?php echo $rating; ?&gt;/5&lt;/span&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+
+&lt;blockquote class=&quot;pull-quote&quot;&gt;
+&lt;?php the_field(&#39;pull_quote&#39;); ?&gt;
+&lt;/blockquote&gt;
+
+&lt;section class=&quot;review-body&quot;&gt;
+&lt;?php the_content(); ?&gt;
+&lt;/section&gt;
+
+&lt;footer class=&quot;review-footer&quot;&gt;
+&lt;a href=&quot;/reviews&quot; class=&quot;cta-button&quot;&gt;Read More Reviews&lt;/a&gt;
+&lt;a href=&quot;&lt;?php the_field(&#39;trailer_url&#39;); ?&gt;&quot; class=&quot;cta-button secondary&quot;
+target=&quot;_blank&quot;&gt;Watch Trailer&lt;/a&gt;
+&lt;/footer&gt;
+
+&lt;?php comments_template(); ?&gt;
+&lt;/article&gt;
+
+&lt;?php get_footer(); ?&gt;
+
+�� 4. Enable Comments
+Make sure comments are enabled for the Review post type:
+ Go to Settings → Discussion and allow comments.
+ In the WordPress editor, ensure “Allow comments” is checked for each review.
+
+�� 5. Add Structured Data via Plugin or Theme
+
+Use Yoast SEO or manually inject JSON-LD in your template:
+&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+&quot;@context&quot;: &quot;https://schema.org&quot;,
+&quot;@type&quot;: &quot;Review&quot;,
+&quot;itemReviewed&quot;: {
+&quot;@type&quot;: &quot;Movie&quot;,
+&quot;name&quot;: &quot;&lt;?php the_field(&#39;movie_title&#39;); ?&gt;&quot;,
+&quot;director&quot;: {
+&quot;@type&quot;: &quot;Person&quot;,
+&quot;name&quot;: &quot;&lt;?php the_field(&#39;director_name&#39;); ?&gt;&quot;
+}
+},
+&quot;author&quot;: {
+&quot;@type&quot;: &quot;Person&quot;,
+&quot;name&quot;: &quot;&lt;?php the_field(&#39;reviewer_name&#39;); ?&gt;&quot;
+},
+&quot;reviewRating&quot;: {
+&quot;@type&quot;: &quot;Rating&quot;,
+&quot;ratingValue&quot;: &quot;&lt;?php the_field(&#39;rating&#39;); ?&gt;&quot;,
+&quot;bestRating&quot;: &quot;5&quot;
+},
+&quot;reviewBody&quot;: &quot;&lt;?php echo wp_strip_all_tags(get_the_content()); ?&gt;&quot;
+}
+&lt;/script&gt;
+
+�� 6. Add Social Share Buttons
+Use a plugin like Shared Counts or manually add share links in your template using
+get_permalink():
+&lt;div class=&quot;social-share&quot;&gt;
+
+&lt;span&gt;Share:&lt;/span&gt;
+&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=&lt;?php echo get_permalink();
+?&gt;&quot;&gt;Facebook&lt;/a&gt;
+&lt;a href=&quot;https://twitter.com/intent/tweet?url=&lt;?php echo get_permalink(); ?&gt;&quot;&gt;Twitter&lt;/a&gt;
+&lt;/div&gt;

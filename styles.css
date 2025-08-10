@@ -1,0 +1,336 @@
+/* Review Page Styles - The Nollywood Reporter */
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    color: #111;
+    background-color: #fff;
+}
+
+/* Review Article Container */
+.review {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Lora', serif;
+    color: #111;
+}
+
+/* Review Header */
+.review-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.review-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.review-image-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #f5b301, #e0a800);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.review-image-placeholder h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-image-placeholder p {
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.8;
+}
+
+.review-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem; /* 40px */
+    line-height: 1.2; /* 48px */
+    letter-spacing: -0.5px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.review-subheading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.75rem; /* 28px */
+    line-height: 1.3; /* 36px */
+    font-weight: 500;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.review-meta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.4; /* 20px */
+    letter-spacing: 0.5px;
+    color: #666;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+.review-rating {
+    margin-top: 1rem;
+    font-size: 1.25rem; /* 20px */
+    color: #f5b301;
+}
+
+.star {
+    margin-right: 2px;
+}
+
+.star.half::after {
+    content: '☆';
+    color: #ccc;
+    position: relative;
+    left: -1em;
+}
+
+.rating-score {
+    margin-left: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Pull Quote */
+.pull-quote {
+    font-style: italic;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.6; /* 32px */
+    margin: 2rem 0;
+    text-align: center;
+    color: #444;
+    border-left: 4px solid #f5b301;
+    padding-left: 1.5rem;
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+/* Review Body */
+.review-body p {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.7; /* 30px */
+    letter-spacing: 0.25px;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Social Share Buttons */
+.social-share {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.social-share span {
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.social-share a {
+    margin-right: 1rem;
+    color: #0077b5;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #0077b5;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.social-share a:hover {
+    background-color: #0077b5;
+    color: white;
+    text-decoration: none;
+}
+
+/* Review Footer */
+.review-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+.cta-button.secondary {
+    background-color: #f5b301;
+    color: #111;
+}
+
+.cta-button.secondary:hover {
+    background-color: #e0a800;
+}
+
+/* Comment Section */
+.review-comments {
+    margin-top: 3rem;
+    border-top: 1px solid #ddd;
+    padding-top: 2rem;
+}
+
+.review-comments h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.comment-form {
+    margin-bottom: 2rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+    outline: none;
+    border-color: #f5b301;
+}
+
+.comment-form button {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #333;
+}
+
+.comment-list {
+    margin-top: 2rem;
+}
+
+.comment {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border-left: 3px solid #f5b301;
+}
+
+.comment strong {
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.comment p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .review {
+        padding: 1rem;
+    }
+    
+    .review-title { 
+        font-size: 2rem; 
+    }
+    
+    .review-subheading { 
+        font-size: 1.5rem; 
+    }
+    
+    .review-body p { 
+        font-size: 1rem; 
+        text-align: left;
+    }
+    
+    .review-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-share {
+        text-align: left;
+    }
+    
+    .social-share a {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .pull-quote {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-title {
+        font-size: 1.8rem;
+    }
+    
+    .review-subheading {
+        font-size: 1.3rem;
+    }
+    
+    .social-share a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

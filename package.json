@@ -1,0 +1,28 @@
+{
+  "name": "nollywood-reporter-review",
+  "version": "1.0.0",
+  "description": "A modern, responsive review page template for The Nollywood Reporter",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build process needed for static site'",
+    "dev": "serve . -p 3000"
+  },
+  "keywords": [
+    "nollywood",
+    "review",
+    "responsive",
+    "typography",
+    "static-site"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/nollywood-reporter-review.git"
+  },
+  "homepage": "https://YOUR_USERNAME.github.io/nollywood-reporter-review"
+}
